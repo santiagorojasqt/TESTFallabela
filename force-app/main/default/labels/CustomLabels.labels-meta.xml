@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CaseEvaluacionRcType</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CaseEvaluacionRcType</shortDescription>
+        <value>Evaluacion</value>
+    </labels>
+    <labels>
+        <fullName>CaseEvaluacionSubject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CaseEvaluacionSubject</shortDescription>
+        <value>Evaluacion de Caso [CaseNumber]</value>
+    </labels>
+    <labels>
+        <fullName>CaseReclamoCerrado</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CaseReclamoCerrado</shortDescription>
+        <value>Cerrado2</value>
+    </labels>
+    <labels>
+        <fullName>CaseReclamoRcType</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CaseReclamoRcType</shortDescription>
+        <value>Reclamo</value>
+    </labels>
+    <labels>
+        <fullName>CaseSolicitudRcType</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CaseSolicitudRcType</shortDescription>
+        <value>Solicitud</value>
+    </labels>
+    <labels>
+        <fullName>caseSolicitudCerrado</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>caseSolicitudCerrado</shortDescription>
+        <value>Cerrado2</value>
+    </labels>
+</CustomLabels>

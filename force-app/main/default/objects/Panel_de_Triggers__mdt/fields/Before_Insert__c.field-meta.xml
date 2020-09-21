@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Before_Insert__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Enables Before Insert Trigger</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Enables Before Insert Trigger</inlineHelpText>
+    <label>Before Insert</label>
+    <type>Checkbox</type>
+</CustomField>

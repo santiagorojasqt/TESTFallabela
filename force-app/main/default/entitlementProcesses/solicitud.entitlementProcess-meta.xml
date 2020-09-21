@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Default</businessHours>
+    <entryStartDateField>Case.SlaStartDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <businessHours>Default</businessHours>
+        <milestoneCriteriaFormula>AND(RecordType.Name = &apos;Solucion&apos;,  !IsClosed)</milestoneCriteriaFormula>
+        <milestoneName>Solicitud SLA</milestoneName>
+        <minutesToComplete>960</minutesToComplete>
+        <successActions>
+            <name>Bend_reached</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>Default</businessHours>
+        <milestoneCriteriaFormula>AND( RecordType.Name = &apos;Reclamo&apos;, !IsClosed )</milestoneCriteriaFormula>
+        <milestoneName>Reclamo SLA</milestoneName>
+        <minutesToComplete>480</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>Default</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Reclamos</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Reclamo SLA</milestoneName>
+        <minutesToComplete>720</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>
