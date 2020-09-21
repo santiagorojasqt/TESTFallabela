@@ -74,6 +74,7 @@ public with sharing class CaseTgrHandler {
     ********** Map<Id,Case> the non updated Records
     ** Description: Checks the recordTypes and also validates that the status
     *************** is Closed and that the record is changing the status
+    *************** If not from Trigger the data should be sent in the TgrNew and the TgrOld in Null
     */
     public static void validateType(Map<Id,Case> TgrNew,Map<Id,Case> TgrOld){
         describeInfo = Schema.getGlobalDescribe();//Just call once cause each call to this method is expensive 
@@ -81,7 +82,6 @@ public with sharing class CaseTgrHandler {
         Case curRec = null;
         for(Id Cid : TgrNew.keySet()){
             curRec = curRec;
-            System.debug('!---------------'+curRec.get('RecordTypeId'));
             String RcType = describeInfo.get('Case').getDescribe().getRecordTypeInfosById().get(String.ValueOf(curRec.get('RecordTypeId'))).getName();
             if(
                 (label.CaseReclamoRcType == RcType && String.ValueOf(curRec.get('Status')) == label.CaseReclamoCerrado) || 
